@@ -69,6 +69,13 @@ def change_read():
 def quit_program():
     ui.message('Thanks and bye!')
 
+def delete_book():
+    try:
+        ask_book_id = input('Enter the book ID: ')
+        BookStore.delete_book()
+    except:
+        print('Error: Book Not Found')
+
 
 if __name__ == '__main__':
     main()
