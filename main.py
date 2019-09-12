@@ -33,9 +33,13 @@ def create_menu():
 
 
 def add_book():
-    new_book = ui.get_book_info()
-    new_book.save()
-    
+    try:
+        new_book = ui.get_book_info()
+        new_book.save()
+    except:
+        print()
+        print('Error: Cannot add this book! This book is already in the store list.')
+        print()
 
 def show_read_books():
     read_books = store.get_books_by_read_value(True)
