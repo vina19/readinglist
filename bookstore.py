@@ -1,6 +1,8 @@
 import sqlite3
+import os
 
-db = 'database/books.db'
+# db = os.path.join('database','books.db')
+db = 'books.db'
 
 class Book:
 
