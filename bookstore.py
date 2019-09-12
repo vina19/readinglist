@@ -18,6 +18,8 @@ class Book:
 
 
     def save(self):
+        """ Update the book with the id in database or else
+        add book to the database """
         if self.id:
             self.bookstore._update_book(self)
         else:
